@@ -4,7 +4,7 @@
     use Slim\Factory\AppFactory;
     use \Firebase\JWT\JWT;
     
-    require __DIR__ . '/api/vendor/autoload.php';
+    require __DIR__ . '/vendor/autoload.php';
     use MyFirebase\Firebase as Fb;
     require_once 'MyFirebase.php';
 
