@@ -1,0 +1,5 @@
+Comando para iniciar:
+vercel 
+
+Comando para subir cambios
+vercel --prod
