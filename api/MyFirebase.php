@@ -259,6 +259,11 @@ class Firebase
         curl_close($ch);
     }
 
+    public function obtenerDetalles(){
+        $res = $this->runCurl('prueba/', 'p1');
+        return $res;
+    }
+
 }
 
 /*

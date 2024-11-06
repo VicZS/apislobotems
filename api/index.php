@@ -150,9 +150,25 @@
         $response->write(json_encode($RespuestaT1, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         return $response;
     });
+
+    function CrearRespuesta($codigo, $mensaje, $estado){
+        global $firebase;
+        
+        $resp = array(
+            'code' => $codigo,
+            'message' => $firebase->obtenerDetalles(),
+            "status" => $estado
+        );
+
+        return $resp;
+    };
     
     $app->get('/consulta', function($request, $response, $args){
-        $response->write("Apis Loboteams consulta");
+
+        global $firebase;
+        $resp = CrearRespuesta(500,'apoco si','success');
+
+        $response->write(json_encode($resp, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
         return $response;
     });
 
